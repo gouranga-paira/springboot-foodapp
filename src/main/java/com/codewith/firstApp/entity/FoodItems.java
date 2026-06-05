@@ -2,12 +2,13 @@ package com.codewith.firstApp.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType; // remember this concept of GenerationType.IDENTITY is used to auto increment the id in the database.
 import jakarta.persistence.Id;
 
 @Entity
 public class FoodItems {
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY) //check why jakarta.persistence is used while in the video its not used.
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private double price;
